@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function generateAccountNumber(){
+		var customerName = document.getElementById("custName").value;		
+		document.getElementById("accNo").value = customerName.substring(0,2).toUpperCase() + Math.floor((Math.random() * 10000000000) + 1);
+		document.getElementById("accNo").disabled = "disabled";
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<center><form>
+		<h3>Create Account</h3>
+		<table border="1">
+			<tr>
+				<td>Customer Name:</td>
+				<td><input type="text" id="custName"></td>
+			</tr>
+			<tr>
+				<td>Contact Number:</td>
+				<td><input type="text"></td>
+			</tr>				
+			<tr>
+				<td>Email Id:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Date of Birth:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Amount:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="generateAccountNumber()" value="Generate Account Number">
+				<td><input type="reset" value="Reset"></td>
+			</tr>
+		</table>
+		<br>
+		Account Number: <input type="text" id = "accNo">
+		<br><br>
+		<a href="Menu.html"> Go to Menu</a>
+	</form></center>
+</body>
+</html>
